@@ -2,6 +2,7 @@
 
 A hands-on threat intelligence project focused on identifying, enriching, and analyzing Indicators of Compromise (IOCs) using AlienVault OTX, LevelBlue Labs, and API-driven data collection.
 This project explores ransomware indicators, network infrastructure patterns, and IP/domain/file reputation to simulate real SOC & CTI workflows.
+
 📊 Project Highlights
 🔍 IOC Hunting & Filtering
 
@@ -31,7 +32,7 @@ Compared reputation across external sources (Talos, VirusTotal)
 
 Used curl + OTX API to retrieve IOC metadata in JSON
 
-Parsed key indicators: hash, date first seen, malware family, sandbox detections
+Parsed indicators: hash, first-seen timestamp, malware family, sandbox behavior
 
 Demonstrated how CTI teams automate IOC enrichment
 
@@ -41,9 +42,9 @@ Searched OTX for ransomware-related indicators
 
 Filtered by indicator type (IPv4, URL, SHA256, Domain, Hostname)
 
-Analyzed “Types of Indicators” & “Threat Infrastructure” heatmaps
+Analyzed Types of Indicators and Threat Infrastructure heatmaps
 
-Extracted full JSON using the OTX API:
+Extracted JSON from the OTX API:
 
 curl -s -H "X-OTX-API-KEY: <API_KEY>" https://otx.alienvault.com/api/v1/pulses/indicators
 
@@ -55,7 +56,6 @@ Cisco Talos
 VirusTotal
 
 IP geolocation tools
-
 
 🚀 How to Use
 
