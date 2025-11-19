@@ -24,32 +24,25 @@ FileHash (SHA-256)
 
 Mapped global threat infrastructure by country
 
-Identified ransomware TTPs, indicator clustering, and suspicious IP activity
+Identified ransomware TTPs, indicator clustering, suspicious IP activity
 
 Compared reputation across external sources (Talos, VirusTotal)
 
 🖥️ API & Automation
 
-Used curl + OTX API to retrieve IOC metadata in JSON
-
-Parsed indicators: hash, first-seen timestamp, malware family, sandbox behavior
-
-Demonstrated how CTI teams automate IOC enrichment
-
-🧠 Methodology
-
-Searched OTX for ransomware-related indicators
-
-Filtered by indicator type (IPv4, URL, SHA256, Domain, Hostname)
-
-Analyzed Types of Indicators and Threat Infrastructure heatmaps
-
-Extracted JSON from the OTX API:
-
+Used curl + OTX API to retrieve IOC metadata in JSON:
 curl -s -H "X-OTX-API-KEY: <API_KEY>" https://otx.alienvault.com/api/v1/pulses/indicators
+Extracted:
 
+hash
 
-Cross-checked suspicious indicators using:
+date first seen
+
+malware family
+
+sandbox detections
+
+Cross-checked indicators using:
 
 Cisco Talos
 
@@ -57,17 +50,20 @@ VirusTotal
 
 IP geolocation tools
 
-🚀 How to Use
+🧠 Methodology Summary
 
-Clone the repository:
+Searched OTX for ransomware-related indicators
+
+Filtered by IPv4, URL, SHA256, Domain, Hostname
+
+Analyzed Types of Indicators and Threat Infrastructure
+
+Correlated suspicious hosts with malware families
 
 git clone https://github.com/Niknaz-65/cti-ioc-hunting-otx.git
-
-
-Explore the /screenshots and /findings folders for detailed analysis.
 
 👩‍💻 Author
 
 Niknaz Sadehvandi
 Cybersecurity Student | SOC Analyst Learner | Threat Intelligence Enthusiast
-🔗 LinkedIn: www.linkedin.com/in/niknaz-sadehvandi-a34179325
+🔗 LinkedIn: https://www.linkedin.com/in/niknaz-sadehvandi-a34179325/
