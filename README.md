@@ -1,46 +1,46 @@
-🛡️ Cyber Threat Intelligence & IOC Hunting (OTX / LevelBlue)
+# 🛡️ Cyber Threat Intelligence & IOC Hunting (OTX / LevelBlue)
 
-A hands-on threat intelligence project focused on identifying, enriching, and analyzing Indicators of Compromise (IOCs) using AlienVault OTX, LevelBlue Labs, and API-driven data collection.
+A hands-on threat intelligence project focused on identifying, enriching, and analyzing Indicators of Compromise (IOCs) using AlienVault OTX, LevelBlue Labs, and API-driven data collection.  
 This project explores ransomware indicators, network infrastructure patterns, and IP/domain/file reputation to simulate real SOC & CTI workflows.
 
-📊 Project Highlights
-🔍 IOC Hunting & Filtering
+---
 
-Queried 30K+ OTX indicators using filters such as:
+## 📊 Project Highlights
 
-IPv4
+### 🔍 IOC Hunting & Filtering  
+Queried **30K+ OTX indicators** using filters such as:
+- IPv4  
+- IPv6  
+- URL  
+- Domain  
+- Ransomware  
+- FileHash (SHA-256)
 
-IPv6
+---
 
-URL
+## 🧬 Threat Intelligence Analysis
+- Mapped global threat infrastructure by country  
+- Identified ransomware TTPs, indicator clustering, and suspicious IP activity  
+- Compared reputation across external sources (Talos, VirusTotal)
 
-Domain
+---
 
-Ransomware
+## 🖥️ API & Automation  
+Used **curl + OTX API** to retrieve IOC metadata in JSON:
 
-FileHash (SHA-256)
-
-🧬 Threat Intelligence Analysis
-
-Mapped global threat infrastructure by country
-
-Identified ransomware TTPs, indicator clustering, suspicious IP activity
-
-Compared reputation across external sources (Talos, VirusTotal)
-
-🖥️ API & Automation
-
-Used curl + OTX API to retrieve IOC metadata in JSON:
+```bash
 curl -s -H "X-OTX-API-KEY: <API_KEY>" https://otx.alienvault.com/api/v1/pulses/indicators
-Extracted:
+```
 
-hash
+Extracted and analyzed:
 
-date first seen
+Hash values
 
-malware family
+First-seen timestamps
 
-sandbox detections
+Malware families
+
+Sandbox detections
 
 Cross-checked indicators using:
 
@@ -60,7 +60,14 @@ Analyzed Types of Indicators and Threat Infrastructure
 
 Correlated suspicious hosts with malware families
 
+🚀 How to Use
+
+Clone the repository:
+
 git clone https://github.com/Niknaz-65/cti-ioc-hunting-otx.git
+
+
+Explore the /screenshots and /findings folders for detailed analysis.
 
 👩‍💻 Author
 
