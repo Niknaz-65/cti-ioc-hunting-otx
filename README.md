@@ -1,76 +1,68 @@
-# 🛡️ Cyber Threat Intelligence & IOC Hunting (OTX / LevelBlue)
+# Cyber Threat Intelligence & IOC Hunting (OTX / LevelBlue)
 
-A hands-on threat intelligence project focused on identifying, enriching, and analyzing Indicators of Compromise (IOCs) using AlienVault OTX, LevelBlue Labs, and API-driven data collection.  
-This project explores ransomware indicators, network infrastructure patterns, and IP/domain/file reputation to simulate real SOC & CTI workflows.
+## Overview
+Threat intelligence project focused on hunting, enriching, and analyzing Indicators of Compromise (IOCs) using AlienVault OTX, LevelBlue Labs, and API-driven data collection to support SOC and CTI workflows.
 
+## Why This Project Matters to SOC Teams
+- Supports rapid identification of malicious infrastructure during investigations
+- Enables enrichment of raw indicators for SIEM correlation and blocking decisions
+- Demonstrates scalable IOC analysis across large datasets
+
+## Environment
+- OS: Linux / Windows
+- Threat Intelligence Platforms: AlienVault OTX, LevelBlue Labs
+- External Sources: Cisco Talos, VirusTotal
+- Tools: curl, REST APIs, JSON parsing
+- Frameworks: Threat Intelligence lifecycle, SOC triage workflow
+
+## Data Collected / Artifacts
+- IPv4 and IPv6 addresses
+- Domains and URLs
+- File hashes (SHA-256)
+- Ransomware-related indicators
+- IOC metadata (first seen, malware family, reputation)
+- API JSON responses
+
+## Analysis Steps
+1. Queried AlienVault OTX for ransomware-related indicators
+2. Filtered indicators by type (IP, domain, URL, hash)
+3. Retrieved IOC metadata via OTX API
+4. Correlated indicators with LevelBlue intelligence
+5. Cross-validated reputation using Cisco Talos and VirusTotal
+6. Documented findings with screenshots and structured notes
+
+## Findings
+- Identified clusters of ransomware-related infrastructure
+- Observed repeated reuse of hosting providers and ASNs
+- Confirmed malicious reputation across multiple intelligence sources
+- Isolated high-confidence indicators suitable for detection and blocking
+
+## Outcome
+- Curated set of validated IOCs
+- Indicators ready for SIEM ingestion and threat hunting
+- Recommended continuous monitoring for related infrastructure
+
+## Screenshots / Evidence
+
+All evidence stored in `/screenshots/`.
+
+## Repository Structure
+```text
+/screenshots   → investigation evidence  
+/findings      → IOC data and analysis notes  
+queries.txt    → API queries and filters  
+README.md      → project documentation
 ---
 
-## 📊 Project Highlights
-
-### 🔍 IOC Hunting & Filtering  
-Queried **30K+ OTX indicators** using filters such as:
-- IPv4  
-- IPv6  
-- URL  
-- Domain  
-- Ransomware  
-- FileHash (SHA-256)
-
----
-
-## 🧬 Threat Intelligence Analysis
-- Mapped global threat infrastructure by country  
-- Identified ransomware TTPs, indicator clustering, and suspicious IP activity  
-- Compared reputation across external sources (Talos, VirusTotal)
-
----
-
-## 🖥️ API & Automation  
-Used **curl + OTX API** to retrieve IOC metadata in JSON:
-
-```bash
-curl -s -H "X-OTX-API-KEY: <API_KEY>" https://otx.alienvault.com/api/v1/pulses/indicators
-```
-
-Extracted and analyzed:
-
-Hash values
-
-First-seen timestamps
-
-Malware families
-
-Sandbox detections
-
-Cross-checked indicators using:
-
-Cisco Talos
-
-VirusTotal
-
-IP geolocation tools
-
-🧠 Methodology Summary
-
-Searched OTX for ransomware-related indicators
-
-Filtered by IPv4, URL, SHA256, Domain, Hostname
-
-Analyzed Types of Indicators and Threat Infrastructure
-
-Correlated suspicious hosts with malware families
-
-🚀 How to Use
-
-Clone the repository:
-
-git clone https://github.com/Niknaz-65/cti-ioc-hunting-otx.git
+## Skills Demonstrated
+- Threat intelligence analysis
+- IOC enrichment and validation
+- API-driven data collection
+- SOC triage support
+- Ransomware infrastructure analysis
 
 
-Explore the /screenshots and /findings folders for detailed analysis.
-
-👩‍💻 Author
-
-Niknaz Sadehvandi
-Cybersecurity Student | SOC Analyst Learner | Threat Intelligence Enthusiast
-🔗 LinkedIn: https://www.linkedin.com/in/niknaz-sadehvandi-a34179325/
+## Author
+**Niknaz Sadehvandi**  
+**Cybersecurity Analyst**  
+LinkedIn: https://www.linkedin.com/in/niknaz-sadehvandi-a34179325/
